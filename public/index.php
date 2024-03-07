@@ -1,15 +1,17 @@
 <?php
+require_once 'vendor/autoload.php';
 
+use App\Homework1\Rectangle;
+use App\Homework1\Square;
 
-$b = 1;
+try {
+    $rect = new Rectangle(20, 10);
+    echo 'Area rectangle: ' . $rect->getArea() . PHP_EOL;
+    echo 'Perimeter rectangle: ' . $rect->getPerimeter() . PHP_EOL;
 
-$a = rand(1,20);
-
-if ($a < 10) {
-    echo 'менше 10';
+    $square = new Square(30);
+    echo 'Area square: ' . $square->getArea() . PHP_EOL;
+    echo 'Perimeter square: ' . $square->getPerimeter() . PHP_EOL;
+} catch (Exception $e) {
+  echo "Ooops! Error: " . $e->getMessage() . PHP_EOL;
 }
-echo 'Hello world';
-
-echo PHP_EOL;
-
-echo PHP_EOL;

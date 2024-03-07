@@ -1,4 +1,4 @@
-/vendor/
+vendor
 .idea
 /logs/
 /docker/databases/shutdown_handler.sh
