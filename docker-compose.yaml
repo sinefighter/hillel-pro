@@ -15,4 +15,5 @@ services:
       PHP_IDE_CONFIG: serverName=docker
     volumes:
       - ./public/:${WORKDIR}
-      - ./mails:/var/www/mail
+    command: >
+      sh -c "composer install && docker-php-entrypoint php-fpm"
